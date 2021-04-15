@@ -3,9 +3,9 @@ import { authService, firebaseInstance } from '../firebase';
 
 const Auth = () => {
 
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [newAccount, setNewAccount] = useState(true)
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [newAccount, setNewAccount] = useState(true);
     const [error, setError] = useState("");
     
     const onChange = (e) => {

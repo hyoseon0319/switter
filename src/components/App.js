@@ -10,11 +10,7 @@ function App() {
   useEffect(() => {
    authService.onAuthStateChanged((user) => {
      if(user) {
-       setIsLoggedIn(true);
        setUserObj(user);
-       
-     } else {
-       setIsLoggedIn(false);
      }
      setInit(true);
    })
@@ -27,7 +23,7 @@ function App() {
 
     return (
       <> 
-        {init ? <AppRouter isLoggedIn={isLoggedIn} userObj={userObj} /> : "Initializing..." }
+        {init ? <AppRouter isLoggedIn={Boolean(userObj)} userObj={userObj} /> : "Initializing..." }
         <footer>&copy; Switter {new Date().getFullYear()} </footer>
       </>
     )}
